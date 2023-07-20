@@ -1,0 +1,85 @@
+
+.my-nav{
+  background-color: beige;
+}
+
+.links{
+  color: black;
+  margin-left: 10px;
+}
+.links:hover{
+  color: red;
+}
+
+section{
+  padding: 13em;
+  background-size: 100%;
+  background-color: lightskyblue;
+  background-image: url('../../assets/fon/fon 1.png');
+}
+
+.header-text{
+  font-family: "Segoe Script";
+  color: white;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+  font-weight: bold;
+
+}
+
+.cols {
+padding-bottom: 5px;
+
+}
+
+.cols-img{
+  border: 1px solid black;
+  border-radius: 25px;
+  height: 300px;
+}
+
+.cols-img:hover{
+  border: 2px solid red;
+}
+
+.cooke-name {
+  font-family:"Segoe Script" ;
+  font-size: 40px;
+  color: orange;
+  font-weight: bold;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-align: center;
+}
+
+.cook-image-info {
+  font-family: "Segoe Print";
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cols img {
+  height:  80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.containers {
+margin-top: -170px;
+}
+
+footer {
+  text-align: center;
+  background-color:beige;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+}
+
+
+
+
+

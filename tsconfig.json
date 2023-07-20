@@ -29,5 +29,9 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "include": [
+    "src/**/*.ts",
+    "node_modules/bowser/**/*.ts" // <-- Add this line
+  ]
 }

@@ -1,0 +1,73 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light  my-nav">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand links" >FOOD</a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link links" href="/frontPage">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link links" href="/info{{urlEnums.ABOUT_US}}">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link links" href="/info{{urlEnums.CONTACTS}}">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link links" href="/info{{urlEnums.OUR_FRIENDS}}">Our Friends</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p class="display-1 text-center text-white header-text">Bakery Menu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button (click)="goAdmin()">AdminPasge</button>
+
+<div class="container overflow-hidden containers">
+  <div class="row gx-5">
+      <div (click)="getClick()" class="col-xl-3 cols">
+        <div class="bg-white cols-img">
+          <img src="assets/button/CakeFon.png" alt="Forest" >
+          <p class="cooke-name">Cakes</p>
+          <p class="cook-image-info">You trust us,We do our best</p>
+        </div>
+      </div>
+
+      <div class="col-xl-3 cols">
+        <div class="bg-white cols-img">
+          <img src="assets/button/CookesFon.png" alt="Forest">
+          <p class="cooke-name">Cookies</p>
+          <p class="cook-image-info"> You could give up cookies, but you’re no quitter</p>
+        </div>
+
+      </div>
+      <div class="col-xl-3 cols">
+        <div class="bg-white cols-img">
+        <img src="assets/button/BreadFon.png" alt="Forest">
+        <p class="cooke-name">Breads</p>
+        <p class="cook-image-info">With a piece of bread in your hand you’ll find paradise under a pine tree</p>
+        </div>
+      </div>
+      <div class="col-xl-3 cols">
+        <div class="bg-white cols-img">
+          <img src="assets/button/posteriesFon.png" alt="Forest">
+          <p class="cooke-name">Pastries</p>
+          <p class="cook-image-info">We make it with big love</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+ <footer>
+   <p>www.Bakery.Com<br>
+     <a href="mailto:hege@example.com">www.Bakery.Com</a></p>
+ </footer>
