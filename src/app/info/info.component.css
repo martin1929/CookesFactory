@@ -1,0 +1,49 @@
+.my-nav {
+  background-color: beige;
+}
+
+.links {
+  color: black;
+  margin-left: 10px;
+}
+
+.links:hover {
+  color: red;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+.input-container button[type="submit"] {
+  margin-left: 1150px;
+  margin-right: 10px;
+}
+.search {
+  display: block;
+  margin-left: 2%;
+}
+.my-button{
+  display: block;
+  margin-left: 60%;
+}
+
+.contact{
+
+}
+.user-contacts{
+  background-color: beige;
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 20%;
+}
+
+.cols-img{
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 260px;
+  height: 260px;
+}
