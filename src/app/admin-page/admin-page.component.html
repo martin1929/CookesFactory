@@ -1,0 +1,160 @@
+<section class="vh-100 bg-image" *ngIf="options"
+         style="background-image: url('../../assets/fon/fon 1.png')">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Choose Options</h2>
+
+              <form>
+                <div class="d-flex justify-content-center mt-5">
+                  <button type="button" (click)="choseOption('register')"
+                          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register User
+                  </button>
+                </div>
+
+                <div class="d-flex justify-content-center mt-5">
+                  <button type="button" (click)="choseOption('cake')"
+                          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register Cake
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vh-100 bg-image" *ngIf="register"
+         style="background-image: url('../../assets/fon/fon 1.png')">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form class="row g-3 needs-validation" novalidate>
+                <div class="form-outline mb-4">
+                  <label for="validationCustom0" class="form-label">First name</label>
+                  <input #userName type="text" class="form-control" id="validationCustom0" value="Mark" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="userLastname">Lastname</label>
+                  <input #lastname type="text" id="userLastname" class="form-control form-control-lg" required/>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="userEmail">Email</label>
+                  <input type="email" #email id="userEmail" class="form-control form-control-lg" required/>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="userPassword">Password</label>
+                  <input type="password" #password id="userPassword"  class="form-control form-control-lg" required/>
+                </div>
+
+                <div  class="form-outline mb-4">
+                  <label class="form-label" for="userRole">Role</label>
+                  <select id="userRole"  (change)="getSelectedValue($event)"  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
+                    <option selected>Select Role</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="MANAGER">MANAGER</option>
+                    <option value="USER">USER</option>
+                  </select>
+                </div>
+
+                <div class="form-check d-flex justify-content-center mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg"/>
+                  <label class="form-check-label" for="form2Example3cg">
+                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button (click)="sendUserModel(userName,lastname,email,password )" type="button"
+                          class="btn btn-success  btn-lg gradient-custom-4 text-body">Register
+                  </button>
+                </div>
+
+                <p class="text-center text-muted mt-5 mb-0">Have already an account?
+                  <a href="/log" class="fw-bold text-body"><u>Login here</u></a></p>
+                <p class="text-center text-muted mt-5 mb-0">
+                  <a href="/admin" (click)="returnHome()"
+                     class="fw-bold text-body"><u>Return Home</u></a></p>
+
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="vh-100 bg-image" *ngIf="cake"
+         style="background-image: url('../../assets/fon/fon 1.png')">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Add Cake</h2>
+
+              <form (submit)="sendCakeModel(cakeName,description,price)">
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="cakeName">Cake Name</label>
+                  <input #cakeName type="text" id="cakeName" class="form-control form-control-lg" required/>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="cakeDescription">Cake Description</label>
+                  <input #description type="text" id="cakeDescription" class="form-control form-control-lg" required/>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="cakePrice">Cake Price</label>
+                  <input type="number" #price id="cakePrice" class="form-control form-control-lg" required/>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="image">Cake Image</label>
+                  <input type="file" id="image" class="form-control form-control-lg" (change)="onFileSelected($event)" required/>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit"
+                          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register
+                  </button>
+                </div>
+                <p class="text-center text-muted mt-5 mb-0">
+                  <a href="/admin" (click)="returnHome()"
+                     class="fw-bold text-body"><u>Return Home</u></a></p>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
