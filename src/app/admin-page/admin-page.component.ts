@@ -11,7 +11,7 @@ import {Observable} from "rxjs";
   templateUrl: './admin-page.component.html',
   styleUrls: ['./admin-page.component.css']
 })
-export class AdminPageComponent implements OnInit{
+export class AdminPageComponent implements OnInit {
   constructor(private adminService: AdminService,
               private store: Store) {
   }
@@ -26,7 +26,7 @@ export class AdminPageComponent implements OnInit{
   public options: boolean = true;
   public role: string = '';
   public localUser: LocalUser | undefined
-
+  public success: boolean = false;
 
 
   listener() {
@@ -56,7 +56,10 @@ export class AdminPageComponent implements OnInit{
     formData.append('file', this.selectedFile, this.selectedFile.name);
 
     this.adminService.saveCake(cakeModel).subscribe((response) => {
-      console.log(response);
+      setTimeout(() => {
+        this.success = false
+      }, 1000);
+      this.success = true
 
     });
     this.adminService.saveImage(formData).subscribe()
@@ -104,8 +107,6 @@ export class AdminPageComponent implements OnInit{
     // @ts-ignore
     this.role = event.target.value;
   }
-
-
 
 
 }

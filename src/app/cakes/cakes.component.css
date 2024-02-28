@@ -20,7 +20,7 @@
 
 
 .input-container button[type="submit"] {
-  margin-left: 1085px;
+  margin-left: 224px;
   margin-right: 10px;
 }
 .search {
@@ -35,8 +35,8 @@
 .cols-img{
   border: 1px solid black;
   border-radius: 25px;
-  width: 260px;
-  height: 260px;
+  width: 200px;
+  height: 200px;
 }
 
 .cols-img:hover{
@@ -47,9 +47,11 @@
   border: 1px solid black;
   border-radius: 25px;
   margin-left: 23%;
-  width: 260px;
-  height: 260px;
+  width: 100px;
+  height: 100px;
 }
+
+
 
 .modal-header-text{
   margin-left: 45%;

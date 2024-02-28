@@ -1,7 +1,6 @@
 
 <nav class="navbar navbar-expand-lg navbar-light  my-nav">
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link links text-nowrap" href="/frontPage">Home</a>
@@ -32,7 +31,8 @@
     <div class="row g-5">
       <div *ngFor="let cakes of cakeArray " class="col-4 img-cols">
         <div data-bs-toggle="modal" data-bs-target="#myModal">
-            <img (click)="showModalImg(cakes)" [src]="'http://localhost:8080/api/v1/cakeImage/getImage/' + cakes.cakeName + '.jpg'" alt="Cake1" class="cols-img" >
+            <img (click)="showModalImg(cakes)"
+                 [src]="'http://localhost:8080/api/v1/cakeImage/getImage/' + cakes.cakeName + '.jpg'" alt="Cake1" class="cols-img" >
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
     </div>
   </div>
 </section>
-<section>
+<section >
   <div class="modal fade" id="myModal">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -56,9 +56,12 @@
         <div class="modal-header justify-content-center text-uppercase ">
           <h4 class="modal-title  ">{{cake.cakeName}}</h4>
         </div>
+        <div class="modal-header justify-content-center  ">
+          <img
+               [src]="'assets/cakes/' + cake.cakeName + '.jpg'" alt="Cake1" width="100px" >
+        </div>
         <!-- Modal body -->
         <div class="modal-body">
-
           <h6 class="mt-2 text-center">Description</h6>
           <p class=" text-center">{{cake.description}} </p>
           <h6 class="mt-2 text-center">Price</h6>

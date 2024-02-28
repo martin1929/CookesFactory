@@ -12,9 +12,8 @@
 }
 
 section{
-  padding: 13em;
+  padding: 9em;
   background-size: 100%;
-  background-color: lightskyblue;
   background-image: url('../../assets/fon/fon 1.png');
 }
 
@@ -27,8 +26,8 @@ section{
 }
 
 .cols {
-padding-bottom: 5px;
-
+  width: 230px;
+  height: 300px;
 }
 
 .cols-img{
@@ -66,7 +65,7 @@ padding-bottom: 5px;
 }
 
 .containers {
-margin-top: -170px;
+
 }
 
 footer {

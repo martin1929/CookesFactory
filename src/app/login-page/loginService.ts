@@ -26,7 +26,4 @@ export class LoginService {
   public getUser(email:string):Observable<any>{
     return this.http.get(`${this.apiSeverUrl}/api/user/getUser?email=${encodeURIComponent(email)}`);
   }
-  public getAllUser():Observable<any>{
-    return this.http.get(`${this.apiSeverUrl}/api/cake/getUsers`);
-  }
 }

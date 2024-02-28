@@ -18,7 +18,6 @@ import {AuthInterceptor} from "./AuthInterceptor";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MyResolverResolver} from "./my-resolver.resolver";
 import {AuthGuard} from "./auth/auth.guard";
-import { TryComponent } from './try/try.component';
 import {NgxsModule} from "@ngxs/store";
 import {LocalUser, LocalUserAction, LocalUserState} from "./local-user-state";
 import {SpeedTestModule} from "ng-speed-test";
@@ -28,9 +27,9 @@ const appRoutes: Routes = [
   {path: 'frontPage', component: FrontPageComponent},
   {path: 'bread', component: BreadesComponent},
   {path: 'info', component: InfoComponent},
-  {path: 'try', component: TryComponent},
   {path: 'log', component: LoginPageComponent},
   {path: 'admin', component: AdminPageComponent,canActivate: [AuthGuard]},
+  { path: '', redirectTo: '/log', pathMatch: 'full' },
   {
     path: 'cakes', component: CakesComponent,
     resolve: {myData: MyResolverResolver}
@@ -47,7 +46,6 @@ const appRoutes: Routes = [
     InfoComponent,
     LoginPageComponent,
     AdminPageComponent,
-    TryComponent
   ],
   imports: [
     BrowserModule,

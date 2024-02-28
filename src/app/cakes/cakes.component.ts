@@ -15,19 +15,18 @@ export class CakesComponent implements OnInit {
 
   constructor(private http: HttpClient,
               private route: ActivatedRoute,
-              private cs: CakeService) {
+              private cakeService: CakeService) {
   }
 
   ngOnInit(): void {
-    this.cs.getCakesNames().subscribe((resp) => {
-      this.data = resp;
-      this.cakeArray = this.data
-      console.log(resp)
+    this.cakeService.getAllCakes().subscribe((response) => {
+      let responseDate = response;
+      this.cakeArray = responseDate;
+      console.log(responseDate)
     });
 
   }
 
-  public data: any;
   public cakeArray: CakeModel[] = [];
   public cardCakeArray: CakeModel[] = [];
   public cakeShowArray: string[] = [];

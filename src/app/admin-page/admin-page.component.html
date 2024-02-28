@@ -142,9 +142,13 @@
 
 
                 <div class="d-flex justify-content-center">
-                  <button type="submit"
+                  <button *ngIf="!success" type="submit"
                           class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register
                   </button>
+                  <button *ngIf="success" type="submit"
+                          class="btn btn-light btn-block btn-lg gradient-custom-4 text-body">Success
+                  </button>
+
                 </div>
                 <p class="text-center text-muted mt-5 mb-0">
                   <a href="/admin" (click)="returnHome()"
